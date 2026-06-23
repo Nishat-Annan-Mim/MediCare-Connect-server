@@ -9,6 +9,8 @@ import { notFound, errorHandler } from "./middleware/error.middleware.js";
 import healthRoutes from "./routes/health.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import doctorRoutes from "./routes/doctor.routes.js";
+import appointmentRoutes from "./routes/appointment.routes.js";
+import reviewRoutes from "./routes/review.routes.js";
 
 dotenv.config();
 
@@ -32,10 +34,10 @@ if (process.env.NODE_ENV !== "production") {
 app.use("/api/health", healthRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/doctors", doctorRoutes);
+app.use("/api/appointments", appointmentRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 // Mounted in upcoming stages:
-// app.use("/api/appointments", appointmentRoutes);
-// app.use("/api/reviews", reviewRoutes);
 // app.use("/api/payments", paymentRoutes);
 // app.use("/api/prescriptions", prescriptionRoutes);
 
