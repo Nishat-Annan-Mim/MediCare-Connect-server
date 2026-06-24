@@ -13,6 +13,8 @@ import appointmentRoutes from "./routes/appointment.routes.js";
 import reviewRoutes from "./routes/review.routes.js";
 import prescriptionRoutes from "./routes/prescription.routes.js";
 import paymentRoutes from "./routes/payment.routes.js";
+import contactRoutes from "./routes/contact.routes.js";
+import statsRoutes from "./routes/stats.routes.js";
 
 dotenv.config();
 
@@ -40,6 +42,8 @@ app.use("/api/appointments", appointmentRoutes);
 app.use("/api/reviews", reviewRoutes);
 app.use("/api/prescriptions", prescriptionRoutes);
 app.use("/api/payments", paymentRoutes);
+app.use("/api/contact", contactRoutes);
+app.use("/api/stats", statsRoutes);
 
 // ---------- Error Handling ----------
 app.use(notFound);
